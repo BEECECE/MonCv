@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    overflow: hidden;
+}
+
+.triangle_1 {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 200px;
+    border-left-width: 0;
+    border-top: 200px solid  rgba(0, 0, 0, 0.737);
+}
+
+.triangle_2 {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 0;
+    border-left-width: 200px;
+    border-bottom: 200px solid rgba(0, 0, 0, 0.737);
+    transform: translateX(81vw) translateY(35vh);
+    overflow: hidden;
+}
+
+/* Overflow hidden to reduce potential bugs */
+.box {
+    overflow: hidden;
+    background-image: url('/img/gold.jpg');
+    background-size: cover;
+    z-index: 1000;
+  }
+  
+  /* After so that the parent becomes the .box value */
+  .box:after {
+    content: '';
+    display: block;
+  }

@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+html, body {
+    height: 100%;
+}
+body {
+    overflow-y: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: #fce446;
+    position: fixed;
+    height: 60px;
+    overflow: hidden;
+    z-index: 10;
+}
+.header a.logo img {
+    display: block;
+    transform: scale(80%);
+    padding-left: 50vw;
+    padding-top: -3em;
+    
+   
+}
+
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 240px;
+    margin-top: 45px;
+    transform: translateX(-250px);
+    transition: transform 300ms ease-in-out;
+    background: linear-gradient(180deg,#fce446 0%, #ba000087 100%);
+
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.127);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+.sidebarMenuInner li span{
+    display: block;
+    padding-top: 10px;
+    font-size: 18px;
+    color: rgba(23, 2, 10, 0.531);
+}
+.sidebarMenuInner li a{
+    color: rgba(0, 0, 0, 0.634);
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sidebarMenuInner li a:hover{
+  font-weight: 300;
+  color: black;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 24px;
+    left: 15px;
+    height: 24px;
+    width: 24px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+
+.bg-img {
+    /* The image used */
+    background-image: url("/img/big.jpg");
+    overflow: hidden;
+    opacity: 0.1;
+    min-height: 95vh;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Needed to position the navbar */
+  }
+
+  /* Position the navbar container inside the image */
+.container{
+    position: absolute;
+    margin: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/* CENTER WORDS */
+
+#interest {
+  color:#fce446;
+  text-transform: uppercase;
+  padding-left: 40vw;
+  font-family: 'lato';
+  font-size: 33px;
+  font-weight:bold;
+  padding-top:200px;  
+  margin-bottom: 1.5em;
+  letter-spacing: 0.3em;;
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  background:#42c58a;
+}
+#flip div:first-child div {
+  background:#4ec7f3;
+}
+#flip div:last-child div {
+  background:#DC143C;
+}
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+
+
+
+/* footer */
+
+footer{
+    display: flex;
+    background: #fce446;
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3em;
+    height: 2em;
+}    
+
+footer div{
+    padding-left: 15%;
+    background: #fce446;
+}
+footer li{
+    list-style-type: none;
+    text-decoration: none;
+}
+.blink {
+    animation: blink-animation 3s steps(5, start) infinite;
+    -webkit-animation: blink-animation 3s steps(5, start) infinite;
+  }
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  @-webkit-keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+
+
+
+/* copyright
+<a href='https://pngtree.com/so/yellow'>yellow png from pngtree.com</a>
+
+<a href='https://pngtree.com/so/golden-effect'>golden effect png from pngtree.com</a>
+
+*/
